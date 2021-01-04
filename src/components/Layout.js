@@ -20,7 +20,12 @@ const resetStyle = {
     height:'25px',
     borderRadius: '20px',
     outline: 'none',
-    background: '#7FFFD4'
+    background: '#7FFFD4',
+};
+
+const pStyle = {
+    fontFamily: 'courier',
+    fontSize: '160%',  
 };
 
 const Layout = ({boardTiles, tileOnClick, winner, resetOnClick}) => {
@@ -34,7 +39,7 @@ const Layout = ({boardTiles, tileOnClick, winner, resetOnClick}) => {
         </div>
         <div >
             <button onClick={resetOnClick} style={resetStyle}>Reset</button>
-            <p>{winner ? `The winner is: ${winner===PLAYER_ONE ? 'Red Player' : 'Blue Player'}`: ''}</p>
+            <p style={pStyle}>{winner ? `The winner is: ${winner===PLAYER_ONE ? 'Red Player' : 'Blue Player'}`: ''}</p>
         </div>
         </>
     );
